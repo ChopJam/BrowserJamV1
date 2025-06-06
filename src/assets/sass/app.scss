@@ -1,0 +1,24 @@
+// Scrollbar Styles
+// For Webkit-based browsers
+::-webkit-scrollbar {
+  width: 12px; // Width of the scrollbar
+  height: 12px; // Height of the scrollbar (for horizontal scrollbar)
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; // Track background color (optional)
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000; // Thumb color (black)
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333; // Darker thumb color on hover (optional)
+}
+
+// For Firefox
+.scrollable {
+  scrollbar-width: thin; // Makes the scrollbar thinner
+  scrollbar-color: #000 #f0f0f0; // Thumb color, Track color
+}

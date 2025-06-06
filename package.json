@@ -1,0 +1,46 @@
+{
+  "name": "nuxt-app",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@nuxtjs/robots": "^4.1.7",
+    "@nuxtjs/sitemap": "^6.1.1",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
+    "@pinia/nuxt": "^0.5.5",
+    "@popperjs/core": "^2.11.8",
+    "@vercel/analytics": "^1.3.1",
+    "@vesp/nuxt-fontawesome": "^1.1.0",
+    "@vueuse/nuxt": "^11.1.0",
+    "add": "^2.0.6",
+    "animejs": "^3.2.2",
+    "module": "^1.2.5",
+    "nanoid": "^5.0.7",
+    "nuxt": "^3.13.0",
+    "sass-embedded": "^1.79.5",
+    "sharp": "^0.33.5",
+    "vee-validate": "^4.13.2",
+    "vite-plugin-node-polyfills": "^0.23.0",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vue3-toastify": "^0.2.3",
+    "ws": "^8.18.1",
+    "yup": "^1.4.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+	"deploy": "npm run generate && gh-pages -d dist"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "gh-pages": "^6.3.0"
+  }
+}
