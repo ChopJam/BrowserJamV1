@@ -6,7 +6,7 @@ export default defineNuxtConfig({
    *    become "./_nuxt/XYZ.js" instead of "/_nuxt/XYZ.js" or "/BrowserJamV1/_nuxt/XYZ.js".
    */
   app: {
-    baseURL: '/BrowserJamV1/',
+    baseURL: './',
     head: {
       title: 'Animal Jam Masterpieces Viewer - Discover Amazing Art',
       meta: [
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
    *    Without this, Vite will default to "/", which again forces absolute URLs.
    */
   vite: {
-    base: '/BrowserJamV1/',
+    base: './',
     assetsInclude: ['**/*.swf']
   },
 
