@@ -23,3 +23,11 @@ npm run preview
 ```
 
 The app is deployed on [Railway](https://animaljam.up.railway.app/).
+
+## Deployment on Render
+
+1. Create a new Web Service and connect this repository.
+2. Set `npm run build` as the **Build Command** and `npm run start` as the **Start Command**.
+3. Use a Node 18+ runtime.
+4. Deploy the service.
+
