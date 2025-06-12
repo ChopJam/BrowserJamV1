@@ -31,3 +31,4 @@ The app is deployed on [Railway](https://animaljam.up.railway.app/).
 3. Render may default to Bun because the repo has `bun.lockb`. Select **npm** as the package manager.
 4. The project pins **Node 18** in `.node-version`, so choose the same runtime.
 5. Click **Create Web Service** to deploy.
+
