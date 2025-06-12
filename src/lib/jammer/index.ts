@@ -59,7 +59,7 @@ export default class Jammer extends EventEmitter {
 
     this.socket = tlsConnect({
       ...connectionOptions,
-      rejectUnauthorized: false,
+      rejectUnauthorized: true,
     })
 
     return new Promise<void>((resolve, reject) => {

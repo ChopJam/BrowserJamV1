@@ -34,7 +34,6 @@ const toggle = () => open.value = !open.value;
  * Creates a new popper instance.
  */
 const createPopperInstance = () => {
-  console.log(button.value, content.value)
   if (button.value && content.value) {
     popperInstance.value = createPopper(button.value, content.value, {
       strategy: "fixed",

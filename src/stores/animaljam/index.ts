@@ -1,4 +1,5 @@
 import { type AuthenticatorResponse, type FlashvarsResponse } from './animaljam.types';
+import { useCookie } from '#app';
 
 export const useAnimalJamStore = defineStore('animaljam', () => {
   const { $toast } = useNuxtApp();
@@ -7,12 +8,19 @@ export const useAnimalJamStore = defineStore('animaljam', () => {
    * The username of the user.
    * @type {string}
    */
-  const username = ref<string>("");
+  const username = useCookie<string>('aj-username', {
+    default: () => '',
+    sameSite: 'lax',
+  })
 
   /**
    * Authentication token for the user.
    */
-  const token = ref<string>("");
+  const token = useCookie<string>('aj-token', {
+    default: () => '',
+    sameSite: 'lax',
+    secure: true,
+  })
 
   /**
    * Authenticates the user with the Animal Jam API.
@@ -40,7 +48,7 @@ export const useAnimalJamStore = defineStore('animaljam', () => {
       username.value = screen_name;
       token.value = auth_token;
 
-      navigateTo('/game');
+      navigateTo('/play');
 
       $toast.success("Logged in successfully");
     } catch (error) {
@@ -73,15 +81,16 @@ export const useAnimalJamStore = defineStore('animaljam', () => {
     }
   }
 
+  const logout = () => {
+    username.value = ''
+    token.value = ''
+  }
+
   return {
     authtenticate,
     flashVars,
+    logout,
     username,
     token,
-  }
-}, {
-  persist: {
-    storage: localStorage,
-    pick: ['username', 'token'],
   }
 });

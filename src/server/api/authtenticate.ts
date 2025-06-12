@@ -4,7 +4,6 @@ export default defineEventHandler(async (event) => {
   try {
     const { screen_name, password } = await readBody(event);
     
-    console.log('Received authentication request:', { screen_name, password });
     const response = await $fetch('https://authenticator.animaljam.com/authenticate', {
       method: 'POST',
       headers: {
